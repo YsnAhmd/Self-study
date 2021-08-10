@@ -10,13 +10,17 @@ body{
     width: 500px;
     height: 1000px;
     background-color: aliceblue;
-    position: relative; /*Don't change the normal flow*/
+    position: relative; /*Don't change the normal flow but enables offsets*/
 }
+/* 
+Offsets --- top, right, bottom, and left
+*/
+
 .sibling1{
     width: 150px;
     height: 150px;
     background-color: rgb(17, 52, 83);
-    position: absolute; /*Changes the normal flow according to the relative position if not found then by viewpoint */
+    position: absolute; /*Changes the normal flow according to the relative position if not found then by viewpoint and supports offsets and it doesn't support margin collaps*/
     bottom: 0;
     right: 0;
 }
@@ -24,18 +28,19 @@ body{
     width: 150px;
     height: 150px;
     background-color: rgb(42, 52, 61);
-    position: fixed; /*Changes the normal flow according to the viewpoint */
+    position: fixed; /*Changes the normal flow according to the viewpoint/initial block. if any ancestor doesn't have transform, perspective, or filter property set to none than the ancestor become initial block.offsets available*/
     left: 0;
 }
 .sibling3{
     width: 150px;
     height: 150px;
     background-color: rgb(29, 197, 85);
-    position: sticky; /* Doesn't change the flow. becomes sticky till the parent div height   */
+    position: sticky; /* Combination of fixed and relative position. have to have one offsets value to work properly  */
+    top: 0%;
 }
 .sibling4{
     width: 150px;
     height: 150px;
     background-color: rgb(211, 20, 36);
-    position:static; /* fixed the position in the document flow */
+    position:static; /* Normal document flow */
 }
