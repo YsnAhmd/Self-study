@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: crimson;
+    padding: 50px;
+}
+
+.parent{
+    width: 500px;
+    height: 1000px;
+    background-color: aliceblue;
+    position: relative; /*Don't change the normal flow*/
+}
+.sibling1{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(17, 52, 83);
+    position: absolute; /*Changes the normal flow according to the relative position if not found then by viewpoint */
+    bottom: 0;
+    right: 0;
+}
+.sibling2{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(42, 52, 61);
+    position: fixed; /*Changes the normal flow according to the viewpoint */
+    left: 0;
+}
+.sibling3{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(29, 197, 85);
+    position: sticky; /* Doesn't change the flow. becomes sticky till the parent div height   */
+}
+.sibling4{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(211, 20, 36);
+    position:static; /* fixed the position in the document flow */
+}
