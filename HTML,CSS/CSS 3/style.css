@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Charitta;
+    src: url(./Fonts/Charitta.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box-1{
+    background-color: aqua;
+    color: black;
+    width: 600px;
+    height: 1000px;
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid seagreen;
+
+}
+.box-2{
+    background-color: red;
+    color: black;
+    width: 300px;
+    height: 00px;
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid rgb(89, 104, 95);
+}
+a{
+    display: inline-block;
+    margin: 10px;
+    background-color: black;
+    color: brown;
+    text-decoration: none;
+    font-variant: small-caps;
+}
+div.box-1 > p.para{
+    font-family: Charitta,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    text-indent: 20px;
+    /* line-height: 5px; */
+    text-shadow: 2px 2px 2px red;
+    direction: rtl;
+}
