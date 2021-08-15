@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--Document type declaration for html 5-->
+<html lang="en">
+<!--Html tag with language attribute-->
+<!-- Html head part -->
+
+<head>
+    <!-- Meta tag -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Everything about HTML</title>
+    <!-- Link tag -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<!--Html body part/visuable part  -->
+
+<body>
+    <!-- Header part of the body -->
+    <header>
+        <!-- Site icon -->
+        <img src="./favicon.ico" alt="Site logo" width="100px" height="100px">
+        <!-- Site heading -->
+        <h2>This is the site header</h2>
+        <!-- Site navbar -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+        </nav>
+    </header>
+    <!-- Main part of the site -->
+    <main>
+        <!--List, Image, Links and formating section -->
+        <section>
+            <!-- Lists parts -->
+            <div>
+                <!-- Sub part of a section -->
+                <h2>List</h2>
+                <h3>There are 3 types of list</h3>
+                <article>
+                    <h4>Unordered list
+                    </h4>
+                    <!-- A unordered list -->
+                    <ul type='none'>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </article>
+                <article>
+                    <h4>Ordered list</h4>
+                    <!-- Ordered list -->
+                    <ol type="i" start="10">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ol>
+                </article>
+                <article>
+                    <h4>Description list</h4>
+                    <!-- Description list -->
+                    <dl>
+                        <dt>
+                            Item 1
+                        </dt>
+                        <dd>
+                            Item 1 description
+                        </dd>
+                    </dl>
+                </article>
+            </div>
+            <!-- Images in hrml -->
+            <div>
+                <h2>
+                    Image
+                </h2>
+                <figure>
+                    <!--Used for self-contained content-->
+                    <img src="./images/2.jpg" alt="A figure" title="Anime pic" width="300" height="300">
+                    <figcaption>Image part</figcaption>
+                </figure>
+            </div>
+            <div>
+                <!--Block level grouping-->
+                <h2>
+                    Links
+                </h2>
+                <span>
+                    <!--Inline grouping-->
+                    <a href="#" target="_blank" name='fb'>Facebook</a>
+                    <a href="#" target="_self">Twitter</a>
+                    <a href="#" target="_parent">Google plus</a>
+                    <a href="#" target="_top">Instragam</a>
+                </span>
+            </div>
+            <div>
+                <h2>
+                    Text formatting
+                </h2>
+                <p>
+                    Lorem <strong>ipsum, dolor sit amet</strong> consectetur adipisicing elit. Ad nesciunt culpa dolorum
+                    <i> minima</i> <b>aperiam</b> <u>nam</u> excepturi <small>nihil</small> sint <strike>arum?</strike>
+                    h Mollitia <sup>expedita</sup> <sub>quae</sub> autem distinctio minus veritatis ratione nihil
+                    delectus illum?
+                </p>
+            </div>
+        </section>
+
+        <!-- Table section -->
+        <section>
+            <h2>
+                Table
+            </h2>
+            <table border="1" cellpadding='10'>
+                <caption>
+                    <!--Used for table caption and must be used directly under <table> tag-->
+                    Table caption
+                </caption>
+                <colgroup>
+                    <!-- Used for groupting columns of a table and must be used after caption tag or before thead,tr or td -->
+                    <col style="background-color:red">
+                    <col style="background-color:yellow">
+                    <col style="background-color:rgb(118, 25, 204)">
+                </colgroup>
+                <thead>
+                    <!--Head part of the tble. usually contains table headings-->
+                    <tr>
+                        <th>Heading1</th>
+                        <th>Heading2</th>
+                        <th>Heading3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Body part of a table which contains all the data of a table-->
+                    <tr>
+                        <td>Data1</td>
+                        <td>Data2</td>
+                        <td>Data3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <!--Footer part of a table-->
+                    <tr>
+                        <td colspan="3">Data4</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <!-- Form section -->
+        <section>
+            <h2>
+                HTML form
+            </h2>
+            <form action="#" method="POST" autocomplete="on">
+                <!--Using post method is recommended for security-->
+                <h3>
+                    Different types of input
+                </h3>
+                <label for="">Text:</label>
+                <!--Used to label the input field. for='' attributes works as id for label-->
+                <input type="text" name="" id="">
+                <!--Default width of an input field is 20 characters.-->
+                <hr>
+                <label for="">Radio button:</label>
+                <input type="radio" name="sameName" id="">Radio1
+                <input type="radio" name="sameName" id="">Radio2
+                <!--Same name was used for choosing only one option-->
+                <hr>
+                <label for="">Checkbox:</label>
+                <input type="checkbox" name="" id="">Checkbox1
+                <input type="checkbox" name="" id="">Checkbox2
+                <hr>
+                <label for="">Submit:</label>
+                <input type="submit" value="What you want to show">
+                <hr>
+                <label for="">Select </label>
+                <select name="" id="" size="2" multiple>
+                    <option value="">Option1</option>
+                    <option value="" selected>Option2</option>
+                    <option value="">Option3</option>
+                </select>
+                <hr>
+                <label for="">Textarea</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <hr>
+                <label for="">Button</label>
+                <button type="button">Button</button>
+                <hr>
+                <label for="">Data list</label>
+                <input list="dataList" placeholder='Select one'>
+                <datalist id="dataList">
+                    <option value="data1">
+                    <option value="data2">
+                    <option value="data3">
+                </datalist>
+                <hr>
+                <fieldset>
+                    <!--Used for grouping same kind fields-->
+                    <legend>
+                        <!-- -->
+                        Other input types
+                    </legend>
+                    <label for="">Button type</label>
+                    <input type="button"> <br>
+                   <label for="">Color input:</label>
+                    <input type="color"> <br>
+                    <label for="">Date input:</label>
+                    <input type="date"> <br>
+                    <label for="">Local date time input</label>
+                    <input type="datetime-local"> <br>
+                    <label for="">Email input</label>
+                    <input type="email"> <br>
+                    <label for="">File input</label>
+                    <input type="file"> <br>
+                    <label for="">Hidden input</label>
+                    <input type="hidden"> <br> <!--Used for backend development-->
+                    <label for="">Image input</label>
+                    <input type="image"> <br>
+                    <label for="">Month input</label>
+                    <input type="month"> <br>
+                    <label for="">Number</label>
+                    <input type="number"> <br>
+                    <label for="">Password</label>
+                    <input type="password"> <br>
+                    <label for="">Range input</label>
+                    <input type="range" min="0" max="10" step="3"> <br>
+                    <label for="">Reset button</label>
+                    <input type="reset"> <br>
+                    <label for="">Serch box</label>
+                    <input type="search"> <br>
+                    <label for="">Telephone number</label>
+                    <input type="tel"> <br>
+                    <label for="">Time input</label>
+                    <input type="time"> <br>
+                    <label for="">Url input</label>
+                    <input type="url"> <br>
+                    <label for="">Week input</label>
+                    <input type="week"> 
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        &copy; Yeasin Ahmad Hridoy
+    </footer>
+</body>
+
+</html>
