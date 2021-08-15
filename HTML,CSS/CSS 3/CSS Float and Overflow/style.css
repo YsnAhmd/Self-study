@@ -1,0 +1,15 @@
+img{
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+.p1{
+    background-color: red;
+
+}
+.p2{
+    background-color: #2f5509;
+    color: #eef1f0;
+    overflow: auto;
+    clear: both; /*Clears flex */
+}

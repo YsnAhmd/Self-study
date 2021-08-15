@@ -1,0 +1,78 @@
+a{
+    text-decoration: none;
+    background-color:orange;
+    display: inline-block;
+    text-align: center;
+    padding:30px 40px;
+    color:white;
+}
+.btn{
+    text-decoration: none;
+    background-color: green;
+    text-align: center;
+    padding:10px 20px;
+    border-radius: 10px;
+    color:white;
+    transition: 0.3s all;
+
+}
+/* Use of hover */
+a.btn:hover{
+    background-color: darkcyan;
+}
+.danger{
+    padding: 10px 20px;
+    border: 10px solid transparent  ;
+    text-decoration: none;
+    color:white;
+    transition: 0.3s all;
+    background-color: linear-gradient(rgb(255,255,255))
+
+}
+a.danger{
+    cursor: no-drop;
+}
+.test{
+    padding: 10px 20px;
+    border: 10px solid transparent  ;
+    text-decoration: none;
+    color: tomato ;
+    transition: 0.3s all;
+    background-color: gray;
+
+}
+/* Visited psudo classes */
+.test:visited{
+    background-color:green;
+}
+.gradient{
+    background-image: linear-gradient(to left, rgb(49, 28, 28), rgb(206, 18, 18));
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius:30%;
+    text-decoration: none ;
+    position: relative;
+}
+/* .gradient:hover{
+    background-image: linear-gradient(to right, rgb(49, 32, 199), rgb(rgb(27, 23, 23)));
+} */
+
+/* Psudo element */
+.gradient::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rebeccapurple;
+    z-index: -1 ;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+.gradient:hover::before{
+    opacity: 1;
+    border-radius: 35px;
+}
