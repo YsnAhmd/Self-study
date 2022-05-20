@@ -1,16 +1,33 @@
 let num = [1,2,3,4,5];
 let num2 = new Array(1,2,300,3,4,5);
 let array =[1,2,'a',{a:1,b:2,c:3}];
-let anime =['AOT','Baccano','Gintama','Couboy Bebob'];
+let anime =['AOT','Baccano','Gintama','Cowboy Bebob'];
 let output;
+
+//Declaring array with const keyword
+const array2 = [1,2,3,4,5]; 
+array2[0] = 'a'; //This will work because arrays are not a constant. in case of array const  lets ellements to be reassigned.
+console.log(array2);
+
+//Accessing Array Elements
+output = anime[0];
+console.log(output);
+output = anime[anime.length-1];
+console.log(output);
+
 
 // Array methods
 // Array checks
 console.log(Array.isArray(array));
+console.log(array instanceof Array);
 
 //Array.from() 
 let aF=Array.from('Yeasin'); //Creates an array from an array like or iterable object.
 console.log(aF);
+
+//Array.keys()
+let keys = anime.keys();
+console.log(keys)
 
 // Array.of()
 let af = Array.of('1,2,5'); //Creates an array with a variable number of arguments.
@@ -40,9 +57,6 @@ let fill = Array(5); //Creates an array containing5 empty slots
 fill=fill.fill(5,1,4); //Fills the array with given value according to start and end points. Its a mutator method that means it will change the array.
 console.log(fill);
 
-// Array.filter()
-filter= num.filter(value => value>=2); //Checks the num array based on the function and creates a new array with the values which returned true after going through the function.
-console.log(filter);
 
 // Array.find()
 find=[1,2,3,4,5,6,7,8,9];
@@ -78,9 +92,9 @@ reduce = [1,2,3,4,5];
 function reducer(pV,cV) {
     return pV+cV;
 }
-console.log(reduce.reduce(reducer,2)); //Executes the given callbackFn on every elements and returns a single value. can be used to find out the sum of an array.
+console.log(reduce.reduce(reducer,10)); //Executes the given callbackFn on every elements and returns a single value. can be used to find out the sum of an array.  the function perameter has four arguments. there is a aurgument called total that is the total value of the array.  reduce takes a innitial value as a perameter along with a function.
 reduce[5]=6; //Reduce doesnt change the returned value if the array is changed later.
-
+console.log(reduce);
 //Array.reduceRight()
 rr=[[1],[2],[3]];
 console.log(rr.reduceRight((x,y)=>x.concat(y))); //This method works like reduce method but it works from right to left.
@@ -117,6 +131,7 @@ array[1]='10'
 
 //Check index of array elements
 output =num.indexOf(4);
+console.log(output);
 
 //Mutating array
 //Add a element in the array
@@ -146,15 +161,47 @@ array.reverse();
 
 //Array Concatation
 output=num.concat(num2);
+console.log(output);
 
 //Array sorting
 output = anime.sort(); //Alphabetic wise sort
+console.log(output);
 output =  num2.sort(); //Number sort not based on the value
+console.log(output);
 output = num2.sort(function(x,y){return x-y}); //Number sorting  based on the value
+console.log(output);
+
+//Finding the max and min value in an array
+//The task can be achieved by sorting the full array first and after that finading the first and last value with index numbers but its not efficient to do so much for such a simple task. it can be achieved by using the Math.max and Math.min methods.
+//Math.max.apply()
+let num4 =[1,4,6,2,8,9,3,5];
+console.log(Math.max.apply(null,num4)); //This method returns the maximum value of the array.
+//Math.min.apply()
+console.log(Math.min.apply(null,num4)); //This method returns the minimum value of the array.
 
 //Copying array 
- let num3=num.slice(); //Returns a new array.
+ let num3=num.slice(1,2); //Returns a new array.
  console.log(num3);
+
+ //Array iteration
+ //forEach()
+ anime.forEach(animeF); //this method executes the given function on each element of the array. the function takes three arguments. they are the current element, its index and the array itself. This doesnt change the array.
+    function animeF(a){
+        console.log(a);
+    }
+
+//Map()
+//This method creates a new array with the results of calling a provided function on every element in the calling array. like foreach() method it takes three arguments.
+let num5=num4.map(myFunction);
+console.log(num5);
+function myFunction(value){
+    return value*2;
+}
+
+// Array.filter()
+filter= num.filter(value => value>=2); //Checks the num array based on the function and creates a new array with the values which returned true after going through the function.
+console.log(filter);
+
 
 //output
 console.log(output);
